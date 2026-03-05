@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KOS CHAMPIONS LEAGUE  2026 — Live Scoreboard</title>
+<title>KOS CHAMPIONS LEAGUE 2026 — Live Scoreboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
-  :root{--neon:#00f5ff;--acid:#aaff00;--dark:#050a0f;--panel:#0d1e2e;--text:#c8e8ff;--gold:#ffcc00;--silver:#b8c8d8;--bronze:#cd7f32;--win:#aaff00;--lose:#ff4455;--glow:0 0 20px rgba(0,245,255,0.5)}
+  :root{--neon:#00f5ff;--acid:#aaff00;--dark:#050a0f;--panel:#0d1e2e;--text:#ffffff;--gold:#ffcc00;--silver:#b8c8d8;--bronze:#cd7f32;--win:#aaff00;--lose:#ff4455;--glow:0 0 20px rgba(0,245,255,0.5)}
   *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
   body{background:var(--dark);color:var(--text);font-family:'Rajdhani',sans-serif;overflow-x:hidden;min-height:100vh}
   body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px);pointer-events:none;z-index:9997}
@@ -25,8 +25,8 @@
   @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
   .nav-back{font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:rgba(200,232,255,0.45);text-decoration:none;letter-spacing:0.08em;display:flex;align-items:center;gap:0.35rem;transition:color 0.2s;border:1px solid rgba(0,245,255,0.18);padding:0.35rem 0.8rem}
   .nav-back:hover{color:var(--neon);border-color:var(--neon)}
-  .btn-operator{font-family:'Orbitron',monospace;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;color:#ff9900;border:1px solid rgba(255,153,0,0.4);background:rgba(255,153,0,0.07);padding:0.38rem 0.9rem;cursor:pointer;transition:all 0.2s}
-  .btn-operator:hover{background:rgba(255,153,0,0.15);border-color:#ff9900;box-shadow:0 0 14px rgba(255,153,0,0.2)}
+  .btn-admin{font-family:'Orbitron',monospace;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;color:#ff9900;border:1px solid rgba(255,153,0,0.4);background:rgba(255,153,0,0.07);padding:0.38rem 0.9rem;cursor:pointer;transition:all 0.2s}
+  .btn-admin:hover{background:rgba(255,153,0,0.15);border-color:#ff9900;box-shadow:0 0 14px rgba(255,153,0,0.2)}
   .btn-exit-admin{font-family:'Orbitron',monospace;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;color:var(--lose);border:1px solid rgba(255,68,85,0.4);background:rgba(255,68,85,0.07);padding:0.38rem 0.9rem;cursor:pointer;transition:all 0.2s;display:none}
   .btn-exit-admin:hover{background:rgba(255,68,85,0.15);border-color:var(--lose)}
 
@@ -230,7 +230,7 @@
     nav{padding:0.7rem 1.2rem}
     .logo{font-size:0.8rem;letter-spacing:0.1em}.logo img{height:28px;width:28px}
     .live-badge,.admin-live-badge{font-size:0.6rem;padding:0.28rem 0.6rem}
-    .btn-operator,.btn-exit-admin{font-size:0.56rem;padding:0.35rem 0.7rem;letter-spacing:0.08em}
+    .btn-admin,.btn-exit-admin{font-size:0.56rem;padding:0.35rem 0.7rem;letter-spacing:0.08em}
     .nav-back span{display:none}
     .page-header{padding:5.8rem 1.2rem 1.2rem}
     .admin-header{padding:5.8rem 1.2rem 0.8rem}
@@ -260,7 +260,7 @@
     nav{padding:0.65rem 0.9rem}
     .logo{font-size:0.72rem;letter-spacing:0.07em}.logo img{height:24px;width:24px}
     .live-badge,.admin-live-badge{display:none}
-    .btn-operator,.btn-exit-admin{font-size:0.52rem;padding:0.3rem 0.6rem;letter-spacing:0.06em}
+    .btn-admin,.btn-exit-admin{font-size:0.52rem;padding:0.3rem 0.6rem;letter-spacing:0.06em}
     .page-header{padding:5.2rem 0.8rem 1rem}
     .admin-header{padding:5.2rem 0.8rem 0.7rem}
     .tabs-wrap,.admin-tabs-wrap{top:52px}
@@ -323,8 +323,8 @@
 <!-- PASSWORD OVERLAY -->
 <div class="pw-overlay" id="pwOverlay">
   <div class="pw-box">
-    <div class="pw-title">&#9881; OPERATOR ACCESS</div>
-    <div class="pw-sub">KOS CHAMPIONS LEAGUE  2026</div>
+    <div class="pw-title">&#9881; ADMIN ACCESS</div>
+    <div class="pw-sub">KOS CHAMPIONS LEAGUE 2026</div>
     <label class="pw-label" for="pwInput">ENTER PASSWORD</label>
     <input class="pw-input" type="password" id="pwInput" maxlength="10" placeholder="&#9679;&#9679;&#9679;&#9679;" onkeydown="if(event.key==='Enter')checkPw()">
     <button class="pw-btn" onclick="checkPw()">
@@ -339,15 +339,15 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="logo"><img src="1.png" alt="KOS">KOS <span>CHAMPIONS LEAGUE </span></a>
+  <a href="index.html" class="logo"><img src="1.png" alt="KOS">KOS <span>TECHTRONICA</span></a>
   <div class="nav-right">
     <div class="live-badge" id="liveBadge">&#9679; LIVE</div>
-    <div class="admin-live-badge" id="adminLiveBadge">&#9881; OPERATOR</div>
+    <div class="admin-live-badge" id="adminLiveBadge">&#9881; ADMIN</div>
     <a href="index.html" class="nav-back" id="navBack">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
       <span>MAIN SITE</span>
     </a>
-    <button class="btn-operator" id="btnOperator" onclick="openPw()">&#9881; OPERATOR</button>
+    <button class="btn-admin" id="btnAdmin" onclick="openPw()">&#9881; ADMIN</button>
     <button class="btn-exit-admin" id="btnExitAdmin" onclick="exitAdmin()">&#10005; EXIT ADMIN</button>
   </div>
 </nav>
@@ -357,7 +357,7 @@
 ════════════════════════════════ -->
 <div id="scoreboardMode">
   <div class="page-header">
-    <span class="section-tag">&#9670; KOS CHAMPIONS LEAGUE2026 &#9670;</span>
+    <span class="section-tag">&#9670; KOS CHAMPIONS LEAGUE 2026 &#9670;</span>
     <h1 class="page-title">LIVE <em>SCOREBOARD</em></h1>
     <div class="status-row">
       <span>&#128197; Updated: <span id="lastUpdated">—</span></span>
@@ -384,7 +384,7 @@
 ════════════════════════════════ -->
 <div id="adminMode">
   <div class="admin-header">
-    <h1 class="admin-title">&#9881; OPERATOR <em>PANEL</em></h1>
+    <h1 class="admin-title">&#9881; ADMIN <em>PANEL</em></h1>
   </div>
   <div class="admin-status-bar">
     <span>&#128197; Loaded: <span id="adminLoadedAt">—</span></span>
@@ -405,10 +405,10 @@
   </div>
 </div>
 
-<footer>&copy; 2026 KOS CHAMPIONS LEAGUE  &mdash; AUTO-REFRESHES EVERY 10 SECONDS</footer>
+<footer>&copy; 2026 KOS TECHTRONICA &mdash; AUTO-REFRESHES EVERY 10 SECONDS</footer>
 
 <script>
-const SCRIPT_URL='https://script.google.com/macros/s/AKfycbxB9IQT2FEOEf6ZsGtf_lpMXcXG3ZtUdVbwASAOcJlDA6JI5qTz9h8ibiZ7FOwLlk5O/exec';
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbxIjoGP7qmRkL41a045tVVonEuvE-3d2RyS5MAUPCmbDAiO-RAEqczCzoE28F6GVESe/exec';
 const CORRECT_PW='1121';
 const REFRESH_SEC=10;
 const TIME_EVENTS=['Robo Race'];
@@ -448,11 +448,11 @@ function enterAdmin(){
   document.getElementById('adminMode').style.display='block';
   document.getElementById('liveBadge').style.display='none';
   document.getElementById('adminLiveBadge').style.display='flex';
-  document.getElementById('btnOperator').style.display='none';
+  document.getElementById('btnAdmin').style.display='none';
   document.getElementById('btnExitAdmin').style.display='flex';
   document.getElementById('navBack').style.display='none';
   loadAdminData();
-  showToast('&#9881; Operator mode activated','ok');
+  showToast('&#9881; Admin mode activated','ok');
 }
 function exitAdmin(){
   isAdminMode=false;
@@ -460,7 +460,7 @@ function exitAdmin(){
   document.getElementById('adminMode').style.display='none';
   document.getElementById('liveBadge').style.display='flex';
   document.getElementById('adminLiveBadge').style.display='none';
-  document.getElementById('btnOperator').style.display='flex';
+  document.getElementById('btnAdmin').style.display='flex';
   document.getElementById('btnExitAdmin').style.display='none';
   document.getElementById('navBack').style.display='flex';
   showToast('&#10003; Back to scoreboard','ok');
@@ -636,8 +636,8 @@ function renderAdminPanel(ev,evData,isTime){
 // ── SET RESULT ──
 function setResult(ev,team,round,result,mid){
   setStatus('<span class="saving-dot"></span> Saving...','');
-  fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({type:'admin_set',event:ev,team:team,round:round,result:result})})
+  const url=SCRIPT_URL+'?type=admin_set&event='+encodeURIComponent(ev)+'&team='+encodeURIComponent(team)+'&round='+encodeURIComponent(round)+'&result='+encodeURIComponent(result);
+  fetch(url)
     .then(r=>r.json())
     .then(json=>{
       if(json.status==='ok'){
@@ -653,8 +653,7 @@ function setResult(ev,team,round,result,mid){
               const oppResult=result==='WIN'?'LOSE':'WIN';
               t.result=oppResult;
               allData[ev].teams.forEach(tt=>{if(tt.name===t.name) tt[round+'_result']=oppResult;});
-              fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'application/json'},
-                body:JSON.stringify({type:'admin_set',event:ev,team:t.name,round:round,result:oppResult})});
+              fetch(SCRIPT_URL+'?type=admin_set&event='+encodeURIComponent(ev)+'&team='+encodeURIComponent(t.name)+'&round='+encodeURIComponent(round)+'&result='+encodeURIComponent(oppResult)).catch(()=>{});
             }
           });
           rebuildMatches(ev);renderAdmin();
@@ -664,8 +663,8 @@ function setResult(ev,team,round,result,mid){
 }
 
 function saveTime(ev,team,time){
-  fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({type:'admin_set_time',event:ev,team:team,time:time})}).catch(()=>{});
+  const url=SCRIPT_URL+'?type=admin_set_time&event='+encodeURIComponent(ev)+'&team='+encodeURIComponent(team)+'&time='+encodeURIComponent(time);
+  fetch(url).catch(()=>{});
 }
 
 function rebuildMatches(ev){
